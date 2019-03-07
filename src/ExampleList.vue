@@ -7,7 +7,7 @@
         </ul>
         <div>
             <div>Add Item: <input type="text" v-model="tempItem" /></div>
-            <button type="button" @click="addItem">Click me to change someVariable</button>
+            <button type="button" @click="addItem">ADD</button>
         </div>
     </div>
 </template>
