@@ -1,29 +1,42 @@
 # UCSB Vue
 
 ## Project setup
+
+Type the following command in terminal to get dependencies
+
 ```
-yarn install
+yarn
 ```
 
-### Compiles and hot-reloads for development
+### Run the project
+
+You can stop the terminal by using the "Control + C" shortcut 
+
 ```
-yarn serve
+yarn start
 ```
 
-### Compiles and minifies for production
+### Build the project for release
+
+Will be created inside of dist folder
+
 ```
 yarn build
 ```
 
-### Run your tests
-```
-yarn test
+### Release website easily with surge
+
+If you install surge with command (only once needed for all projects) 
+
+```bash
+npm i -g surge
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+Then you can type
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+surge ./dist <ENTER_SUBDOMAIN>.surge.sh
+
+# as an example
+surge ./dist angeluscb2.surge.sh
+```
