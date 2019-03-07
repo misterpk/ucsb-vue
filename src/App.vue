@@ -23,16 +23,22 @@
                     meters
                 </div>
             </div>
+            <ExampleList></ExampleList>
+            <button type="button" @click="toggleExample">Show / Hide Example Component</button>
+            <div v-if="showExample">
+                <ExampleComponent></ExampleComponent>
+            </div>
+            <div v-show="showExample">
+                <ExampleComponent></ExampleComponent>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-var data = {
-    speedMiles: 1,
-    speedKilometers: 1.61,
-    meters: 1610
-};
+import ExampleComponent from "./ExampleComponent.vue";
+import ExampleList from "./ExampleList.vue";
+
 export default {
     methods: {
         calculateMeters() {
@@ -40,9 +46,23 @@ export default {
         },
         calculate() {
             this.speedKilometers = (this.speedMiles * 1.60934).toFixed(2);
+        },
+        toggleExample() {
+            this.showExample = !this.showExample;
         }
     },
-    data: () => data
+    data: () => {
+        return {
+            speedMiles: 1,
+            speedKilometers: 1.61,
+            meters: 1610,
+            showExample: false
+        };
+    },
+    components: {
+        ExampleComponent,
+        ExampleList
+    }
 };
 </script>
 <style lang="less">
