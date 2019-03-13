@@ -40,3 +40,5 @@ surge ./dist <ENTER_SUBDOMAIN>.surge.sh
 # as an example
 surge ./dist angeluscb2.surge.sh
 ```
+
+## TEST
